@@ -973,7 +973,7 @@ tr td{
     color: rgb(29, 204, 102);
 }
 
-.content{
+.content-about{
     background-color: azure;
     display: flex;
     flex-direction: column;
