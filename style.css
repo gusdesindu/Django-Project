@@ -219,14 +219,8 @@ button:hover {
   background: linear-gradient(135deg, rgb(17, 139, 96), rgb(13, 119, 57));
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .bg2 {
-    background: blue;
-  }
-}
 @media screen and (max-width: 950px) {
   .bg2 {
-    background: red;
     min-height: 110vh;
   }
   .content input,
@@ -239,7 +233,6 @@ button:hover {
 }
 @media screen and (max-width: 767px) {
   .bg2 {
-    background: blueviolet;
     min-height: 160vh;
   }
   body {
