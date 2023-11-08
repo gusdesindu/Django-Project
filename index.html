@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- REMIX ICON -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Warung Bu Wahyu</title>
+  </head>
+  <body>
+    <div class="bg2"></div>
+    <div class="polkadot">
+      <img src="image/—Pngtree—polka dot pattern_7589256.png" alt="" />
+    </div>
+    <div class="container">
+      <nav>
+        <div class="logo"><a href="index.html">W.B. Wahyu</a></div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+
+        <ul class="nav_menu">
+          <li class="nav-links"><a href="index.html">Rumah</a></li>
+          <li class="nav-links"><a href="menu.html">Menu</a></li>
+          <li class="nav-links"><a href="testimonies.html">Testimoni</a></li>
+          <li class="nav-links"><a href="aboutus.html">Tentang Kami</a></li>
+          <li class="nav-links"><a href="contact.html">Kontak</a></li>
+        </ul>
+        
+      </nav>
+    </div>
+
+    <div class="content">
+      <div class="heading">
+        <span>Food</span>
+        <h1>Pesan Minuman & Makanan Lezat</h1>
+        <div class="search">
+          <input type="text" id="search-input" placeholder="Cari menu.." />
+          <button class="btn-search">Cari</button>
+        </div>
+        <div id="search-results">hasil pencarian</div>
+      </div>
+      <div class="food_image">
+        <img src="image/IMG_2130.PNG" alt="rujak" />
+      </div>
+    </div>
+
+    <div class="else">
+      <div class="lok_icon">
+        <i class="ri-map-pin-2-fill"></i>
+      </div>
+      <a
+        href="https://maps.app.goo.gl/gpqL5ubvbP9at1rj7"
+        target="_blank"
+        class="lokal"
+        style="text-decoration: none"
+        ><h4>Ahmad Yani.</h4></a
+      >
+    </div>
+
+    <div class="next">
+      <a href="menu.html"><i class="ri-arrow-right-double-fill"></i></a>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+      // Home JS
+
+      const searchInput = document.getElementById("search-input");
+      const list = document.getElementById("list");
+      const searchResults = document.getElementById("search-results");
+
+      searchInput.addEventListener("keyup", function (e) {
+        const listTerm = e.target.value.toLowerCase();
+
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", "menu.html", true);
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState == 4 && xhr.status == 200) {
+            const otherPageContent = xhr.responseText;
+            const otherPageDiv = document.createElement("div");
+            otherPageDiv.innerHTML = otherPageContent;
+
+            const otherPageListItems = otherPageDiv.querySelectorAll("div h3");
+
+            searchResults.innerHTML = "";
+
+            if (listTerm !== "") {
+              for (let i = 0; i < otherPageListItems.length; i++) {
+                const text = otherPageListItems[i].textContent.toLowerCase();
+                if (text.includes(listTerm)) {
+                  otherPageListItems[i].style.display = "block";
+
+                  searchResults.appendChild(
+                    otherPageListItems[i].cloneNode(true)
+                  );
+                } else {
+                  otherPageListItems[i].style.display = "none";
+                }
+              }
+            }
+          }
+        };
+        xhr.send();
+      });
+    </script>
+  </body>
+</html>
