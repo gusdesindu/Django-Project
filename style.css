@@ -298,6 +298,141 @@ button:hover {
     width: 35%;
     font-size: 14px;
   }
+  /* ------CONTENT CONTACT ------*/
+    .contact-us{
+        width: 90%;
+        margin: 50px auto;
+        padding:20px 5%;
+        margin-left: 20px;
+    }
+
+    .content-box{
+        display: contents;
+        
+    }
+
+    .contact-left{
+        flex-basis: 60%;
+        padding: 40px 30px;
+        box-shadow: -1px -1px 8px rgb(224, 224, 207);
+    }
+
+    .contact-right{
+        flex-basis: 40%;
+        padding: 40px;
+        background-color: rgb(29, 204, 102);
+        color: rgb(247, 247, 229);
+    }
+
+    h1{
+        margin-bottom: 10px;
+    }
+
+    .contact-us p{
+        margin-bottom: 40px;
+    }
+
+    .input-row{
+        display: block;
+        margin-bottom: 20px
+    }
+
+    .input-row .input-group{
+        padding-top: 20px;
+        flex-basis: 45px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    input{
+        border: none;
+        background-color: var(--primary-color);
+        border-bottom: 1px solid rgb(142, 142, 121);
+        outline: none;
+        padding-bottom: 5px;
+        font-family: 'Poppins',sans-serif;
+    }
+
+    textarea{
+        width: 100%;
+        background-color: var(--primary-color);
+        padding-left: -10;
+        border: none;
+        border-bottom: 1px solid rgb(142, 142, 121);
+        outline: none;
+        margin-top: 5px;
+        padding: -7px;
+        font-family: 'Poppins',sans-serif;
+    }
+
+    .btn-cnt{
+        margin-top: 5px;
+        background-color:  rgb(29, 204, 102);
+        width: 100px;
+        height: 50px;
+        border: none;
+        border-radius: 5px;
+        font-size: 17px;
+        color: var(--primary-color);
+        box-shadow: -1px -1px 3px rgb(224, 224, 207);
+    }
+
+    .contact-left h3{
+        color: var(--secondary-color);
+        margin-bottom: 30px;
+    }
+
+    .contact-right h3{
+        color: var(--primary-color);
+        margin-bottom: 30px;
+    }
+
+    tr td:first-child{
+        padding-right: 10px;
+    }
+
+    tr td{
+        padding-top: 30px;
+    }
+
+    .contact-right i{
+        font-size: 20px;
+        margin-left: -15px;
+    }
+
+    /* --FOOTER--- */
+    .copy{
+        background-color: rgb(29, 204, 102);
+        width: 52.7vh;
+        color: rgb(247, 247, 229);
+        padding-top: 30px;
+        transform: translate(-10%,20%);
+        height: 160px;
+    }
+    
+    .icon-footer{
+        padding-top: 10px;
+        padding-left: 20px;
+        letter-spacing: 20px;
+        font-size: 20px;
+        text-decoration: none;
+        list-style: none;
+        color: rgb(247, 247, 229);
+    }
+    
+    .txt-copy{
+        font-size: 10px;
+        margin-top: 0px;
+    }
+    
+    .line-footer{
+        height: 2px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        width: 80%;
+        background-color: rgb(247, 247, 229);
+    }
+    }
 }
 @media screen and (max-width: 560px) {
   .search {
