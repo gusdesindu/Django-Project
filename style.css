@@ -945,3 +945,113 @@ tr td{
       max-width: 100%;
     }
 }
+
+//About us
+.aboutus{
+    display: flex;
+    flex-direction: column;
+    background-color:rgb(29, 204, 102);
+   justify-content: center;
+   margin-top: 50px;
+}
+
+.judul{
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20px;
+    color: rgb(247, 247, 229);
+}
+.judul h1{
+    text-align: center;
+}
+
+.H2 h2{
+    text-align: center;
+    color: rgb(29, 204, 102);
+}
+
+.content{
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+   
+}
+
+.ftwarung1{
+    display: flex;
+    flex-direction: row;
+}
+
+.ft1 img{
+    width: 350px;
+    border-radius: 30px;
+}
+
+.sejarah{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 70px; */
+    margin-top: 70px;
+    margin: 50px;
+}
+
+.sejarah h2{
+    margin-bottom: 20px;
+}
+
+.sejarah p{
+    text-align: center;
+}
+
+.ftwarung2 {
+    display: flex;
+    flex-direction: row-reverse;
+  
+}
+
+@media screen and (max-width: 767px) {
+    .aboutus {
+        display:flex;
+    }
+
+    .ftwarung1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sejarah {
+        flex-direction: column;
+    }
+
+    .ftwarung2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ft1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        
+    }
+
+    .ft1 img {
+        width: 250px;
+
+    }
+    
+    .keterangan {
+        max-width: 300px;
+    }
+}
