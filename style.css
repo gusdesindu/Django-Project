@@ -9,12 +9,12 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--primary-color);
   padding: 20px 8%;
+  box-sizing: border-box;
 }
 .bg2 {
   top: 0;
@@ -100,7 +100,25 @@ nav .checkbox {
 #check {
   display: none;
 }
-.content {
+
+/* Homepage */
+#search-results{
+  display: grid;
+  width: 90%;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 1.5rem;
+  padding: 1em 0;
+  cursor: pointer;
+}
+#search-results img{
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+}
+
+.aboutus {
   display: flex;
   align-items: center;
 }
@@ -430,8 +448,7 @@ button:hover {
         margin-top: 10px;
         margin-bottom: 20px;
         width: 80%;
-        background-color: rgb(247, 247, 229);
-    }
+        background-color: rgb(247, 247, 229)
     }
 }
 @media screen and (max-width: 560px) {
@@ -467,7 +484,7 @@ button:hover {
         .judul h1 {
             color : var(--heading-color);
             font-size: 35px;
-            margin-bottom: 20px;
+            margin-bottom: -2rem;
         }
         
         .keteranganjudul {
@@ -1042,7 +1059,7 @@ tr td{
     height: 230px;
     position: relative;
     bottom: 0;
-    transform: translate(-10%,20%);
+    transform: translate(-7%,20%);
 
 }
 
