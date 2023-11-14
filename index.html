@@ -93,17 +93,24 @@
 
             if (listTerm !== "") {
               for (let i = 0; i < otherPageListItems.length; i++) {
-                const text = otherPageListItems[i].textContent.toLowerCase();
-                if (text.includes(listTerm)) {
-                  otherPageListItems[i].style.display = "block";
+    const text = otherPageListItems[i].textContent.toLowerCase();
+    if (text.includes(listTerm)) {
+        otherPageListItems[i].style.display = "block";
 
-                  searchResults.appendChild(
-                    otherPageListItems[i].cloneNode(true)
-                  );
-                } else {
-                  otherPageListItems[i].style.display = "none";
-                }
-              }
+        const clonedItem = otherPageListItems[i].cloneNode(true);
+
+        const menuName = otherPageListItems[i].textContent.replace(/\s+/g, '-');
+
+        const menuImage = otherPageDiv.querySelector(`.menu-image.${menuName}`);
+
+        if (menuImage) {
+            clonedItem.insertBefore(menuImage.cloneNode(true), clonedItem.firstChild);
+            searchResults.appendChild(clonedItem);
+        }
+    } else {
+        otherPageListItems[i].style.display = "none";
+    }
+}
             }
           }
         };
